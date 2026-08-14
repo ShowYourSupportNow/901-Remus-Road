@@ -337,7 +337,8 @@ Yours sincerely,</textarea>
 </main>
 
 <script>
-const TO = "fran.haines@towerhamlets.gov.uk";
+const TO = "fran.haines@towerhamlets.gov.uk; development.control@towerhamlets.gov.uk; planning@towerhamlets.gov.uk";
+const BCC = "rsheridan@quatro-pr.co.uk";
 const SUBJECT = "I support PA/26/00765/A1";
 
 let userDetails = {};
@@ -374,7 +375,7 @@ function sendLetter() {
     return;
   }
   const fullLetter = userDetails.address + "\n\n" + letter + "\n\n" + userDetails.name;
-  const mailto = "mailto:" + TO + "?subject=" + encodeURIComponent(SUBJECT) + "&body=" + encodeURIComponent(fullLetter);
+  const mailto = "mailto:" + TO + "?bcc=" + encodeURIComponent(BCC) + "&subject=" + encodeURIComponent(SUBJECT) + "&body=" + encodeURIComponent(fullLetter);
   window.location.href = mailto;
 }
 </script>
